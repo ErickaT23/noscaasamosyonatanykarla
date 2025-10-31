@@ -49,7 +49,7 @@ html, body {
         width: 100%;
         height: 50%;
         transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-        background-image: url('/images/envelope-arriba.png');
+        background-image: url('/images/envelope.png');
         background-size: cover; /* Ajusta la imagen para que cubra el área */
         background-position: center; /* Centra la imagen */
         box-shadow: 0 4px 8px rgba(216, 198, 181, 0.5), 0 6px 20px rgba(216, 198, 181, 0.3);
@@ -59,7 +59,7 @@ html, body {
     width: 100%;
     height: 50%;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    background-image: url('/images/envelope-abajo.png');
+    background-image: url('/images/envelope.png');
     background-size: cover; /* Ajusta la imagen para que cubra el área */
     background-position: center; /* Centra la imagen */
     box-shadow: 0 4px 8px rgba(216, 198, 181, 0.5), 0 6px 20px rgba(216, 198, 181, 0.3);
@@ -77,17 +77,16 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 160px;
-    height: 160px;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.216);
-    border-radius: 50%;
+    transition: opacity 1s ease-in-out;
+    z-index: 11;
+    background-image: url(images/seal.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: opacity 1s ease-in-out;
-    z-index: 11;
 }
 #seal h2 {
     margin: 0;
@@ -122,8 +121,6 @@ html, body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
 }
 /* Contenedor del texto, posicionado sobre la imagen */
 .photo-text {
@@ -143,6 +140,7 @@ html, body {
 }
 .photo-text h1, h2, h3{
     color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 9);
 }
 .photo-text p {
     font-size: 100px;
@@ -214,6 +212,49 @@ html, body {
     -webkit-background-clip: text; 
     color: transparent;
 }
+.parents-section {
+    text-align: center;
+    background-color: white;
+  }
+  
+  .parents-section h2 {
+    font-size: 35px;
+    font-family: 'Great Vibes', serif;
+    background: linear-gradient(to right, #a9471c, #c75a24, #e9743d, #c75a24, #a9471c);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none
+  }
+  
+  .parents-names {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .parent-side {
+    max-width: 400px;
+  }
+  .parent-side h3 {
+    font-size: 30px;
+    color: #742b09;
+    text-transform: capitalize;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: oblique;
+    font-weight: 400;
+    text-shadow: none
+  }
+  .parent-side p {
+    font-size: 35px;
+    background: linear-gradient(to right, #a9471c, #c75a24, #e9743d, #c75a24, #a9471c);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: 'Great Vibes', serif;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: none
+  }
 .invitation-info-section {
     position: relative;
     background-color: #2c2c2c;
@@ -383,8 +424,8 @@ html, body {
     font-size: 80px;
     color: #742b09;
 }
-.gifts-section, .gallery-section{
-    background-color: #a9461c52 ;
+.gifts-section, .gallery-section, .parents-section{
+    background-color: #a9461c26 ;
     text-align: center;
     padding: 10px 0 30px;
 }
@@ -500,8 +541,6 @@ html, body {
     height: auto;
     margin-bottom: -5px;
     padding: 0;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
 }
 /* Ocultamos el checkbox de control */
 .hidden-checkbox {
@@ -624,11 +663,11 @@ footer .logo img {
         max-width: 100%; /* Asegura que ocupe todo el ancho disponible en móviles */
     }
     #seal {
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
     }
     #seal h2 {
-        font-size: 32px;
+        font-size: 48px;
     }
     .photo.section{
         position: relative; /* Permite que .photo-text se posicione sobre la imagen */
