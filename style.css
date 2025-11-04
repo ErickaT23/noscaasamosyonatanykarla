@@ -87,6 +87,8 @@ html, body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    width: 220px;
+    height: 220px;
 }
 #seal h2 {
     margin: 0;
