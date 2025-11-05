@@ -1,7 +1,7 @@
 
 const guests = [
-    { id: "1", name: "Aura Violeta Boj", passes: 1 },
-    { id: "2", name: "Iris Boj", passes: 1 },
+    { id: "1", name: "Aura Violeta Boj", passes: 1, gender: "F"},
+    { id: "2", name: "Iris Boj", passes: 1, gender: "F"},
     { id: "3", name: "Daniel Boj", passes: 3 },
     { id: "4", name: "Yesenia Boj y fam.", passes: 5 },
     { id: "5", name: "Flor Boj y fam.", passes: 5 },
@@ -16,28 +16,28 @@ const guests = [
     { id: "14", name: "Manuel Molina y fam.", passes: 3 },
     { id: "15", name: "Manuel López y fam.", passes: 3 },
     { id: "16", name: "Celina Molina", passes: 3 },
-    { id: "17", name: "Jennifer Ayala", passes: 1 },
+    { id: "17", name: "Jennifer Ayala", passes: 1, gender: "F"},
     { id: "18", name: "Antonio Francisco y fam.", passes: 5 },
-    { id: "19", name: "Sofía Tello", passes: 1 },
+    { id: "19", name: "Sofía Tello", passes: 1, gender: "F"},
     { id: "20", name: "Sihesler Mateo y fam.", passes: 2 },
     { id: "21", name: "Alyn Boj", passes: 2 },
     { id: "22", name: "Nery Cajas y fam.", passes: "Tenemos un lugar especial para ti" },
     { id: "23", name: "Mercedes Pedro", passes: 3 },
-    { id: "24", name: "Carlos Mérida", passes: 1 },
+    { id: "24", name: "Carlos Mérida", passes: 1, gender: "X"  },
     { id: "25", name: "Samuel Monterroso y fam.", passes: 3 },
     { id: "26", name: "Maynor Ávila", passes: 2 },
     { id: "27", name: "William López y fam.", passes: 5 },
     { id: "28", name: "Juliana Martínez y fam.", passes: 3 },
     { id: "29", name: "César López y Sra.", passes: 2 },
-    { id: "30", name: "Evelyn Tzitá", passes: 1 },
-    { id: "31", name: "Roberth López", passes: 1 },
+    { id: "30", name: "Evelyn Tzitá", passes: 1, gender: "F"},
+    { id: "31", name: "Roberth López", passes: 1, gender: "X"  },
     { id: "32", name: "Orlando López y fam.", passes: 3 },
     { id: "33", name: "Emerson López y fam.", passes: 3 },
     { id: "34", name: "Luis Sosa y Fam.", passes: 4 },
     { id: "35", name: "Sucely López", passes: 2 },
     { id: "36", name: "Estuardo López y Fam.", passes: 5 },
     { id: "37", name: "Juan Carlos Martínez y Fam.", passes: 4 },
-    { id: "38", name: "María Jose López", passes: 1 },
+    { id: "38", name: "María Jose López", passes: 1, gender: "F"},
     { id: "39", name: "Miriam López y Fam.", passes: 3 },
     { id: "40", name: "Mamfred López Y Fam.", passes: 3 },
     { id: "41", name: "Gricelda López Y Fam.", passes: 5 },
@@ -46,22 +46,22 @@ const guests = [
     { id: "44", name: "Maynor Moreno Y Fam", passes: 3 },
     { id: "45", name: "Miriam Palacios y Fam.", passes: 5 },
     { id: "46", name: "William Del Valle Y Fam.", passes: 5 },
-    { id: "47", name: "Luis Gerardo del Valle", passes: 1 },
+    { id: "47", name: "Luis Gerardo del Valle", passes: 1, gender: "X"  },
     { id: "48", name: "Wilson Serrano y fam.", passes: 4 },
     { id: "49", name: "Wilson Serrano Mérida", passes: 2 },
     { id: "50", name: "Jorfaby Silvestre y Fam.", passes: 5 },
     { id: "51", name: "Anderson Serrano y Arlen Velásquez", passes: 2 },
-    { id: "52", name: "Carlos Méndez", passes: 1 },
-    { id: "53", name: "Dora Beatriz", passes: 1 },
+    { id: "52", name: "Carlos Méndez", passes: 1, gender: "X"  },
+    { id: "53", name: "Dora Beatriz", passes: 1, gender: "F"},
     { id: "54", name: "Cotuha Pedro y fam.", passes: 2 },
-    { id: "55", name: "Lázaro Pérez", passes: 1 },
+    { id: "55", name: "Lázaro Pérez", passes: 1, gender: "X"  },
     { id: "56", name: "Fidelino Sosa", passes: "Tenemos un lugar especial para ti" },
     { id: "57", name: "Ardany Zea", passes: "Tenemos un lugar especial para ti" },
     { id: "58", name: "Brayan Serrano", passes: "Tenemos un lugar especial para ti" },
-    { id: "59", name: "Bryan Castañeda", passes: 1 },
+    { id: "59", name: "Bryan Castañeda", passes: 1, gender: "X"  },
     { id: "60", name: "Carlos César del Valle", passes: 2 },
     { id: "61", name: "Hugo Agustin Y Fam.", passes: 3 },
-    { id: "62", name: "José Andrés Agustin", passes: 1 },
+    { id: "62", name: "José Andrés Agustin", passes: 1, gender: "X"  },
     { id: "63", name: "Aury López Y Fam.", passes: 3 },
     { id: "64", name: "Obdulio Méndez y Fam.", passes: 5 },
     { id: "65", name: "Lisbeth López Y Fam.", passes: 4 },
@@ -70,7 +70,7 @@ const guests = [
     { id: "68", name: "Douglas Aroldo López y Fam.", passes: 5 },
     { id: "69", name: "Lenin López Y Fam.", passes: 6 },
     { id: "70", name: "Loren López", passes: 2 },
-    { id: "71", name: "José Muñoz", passes: 1 },
+    { id: "71", name: "José Muñoz", passes: 1, gender: "X"  },
     { id: "72", name: "Carolina Navarro", passes: 2 },
     { id: "73", name: "Elvin Ramos y fam.", passes: 6 },
     { id: "74", name: "Francisco Castillo y Fam.", passes: 2 },
@@ -84,9 +84,9 @@ const guests = [
     { id: "82", name: "Charito Magdanely y Fam.", passes: 3 },
     { id: "83", name: "David Salas y Fam.", passes: 3 },
     { id: "84", name: "Edmundo Herrera y Fam.", passes: 6 },
-    { id: "85", name: "Romario Herrera", passes: 1 },
-    { id: "86", name: "Fernando Santos", passes: 1 },
-    { id: "87", name: "Megly Sosa", passes: 1 },
+    { id: "85", name: "Romario Herrera", passes: 1, gender: "X"  },
+    { id: "86", name: "Fernando Santos", passes: 1, gender: "X"  },
+    { id: "87", name: "Megly Sosa", passes: 1, gender: "F"},
     { id: "88", name: "Roderico Guzman", passes: 2 },
     { id: "89", name: "Carlos Serrano y fam.", passes: 4 },
     { id: "90", name: "Catalina Camposeco", passes: 2 },
@@ -113,26 +113,26 @@ const guests = [
     if (guest) {
         let message = "";
 
-        // --- Determinar texto según pases y género ---
+        // --- Determinar texto principal según pases y género ---
         if (guest.passes === "Tenemos un lugar especial para ti") {
-            message = "¡Tenemos un lugar especial para ti!";
+            message = `¡${guest.name}, gracias por ser parte de nuestra historia! 💖`;
         } else if (guest.passes === 1) {
             if (guest.gender === "F") {
-                message = "¡" + guest.name + ", estás invitada!";
+                message = `¡${guest.name}, estás invitada!`;
             } else {
-                message = "¡" + guest.name + ", estás invitado!";
+                message = `¡${guest.name}, estás invitado!`;
             }
         } else if (guest.passes > 1) {
             if (guest.gender === "F") {
-                message = "¡" + guest.name + ", están invitadas!";
+                message = `¡${guest.name}, están invitadas!`;
             } else {
-                message = "¡" + guest.name + ", están invitados!";
+                message = `¡${guest.name}, están invitados!`;
             }
         } else {
-            message = "¡" + guest.name + ", estás invitado(a)!";
+            message = `¡${guest.name}, estás invitado(a)!`;
         }
 
-        // Mostrar el mensaje principal
+        // Mostrar el nombre y mensaje
         document.getElementById('guest-name').textContent = message;
 
         // --- Mostrar u ocultar sección de pases ---
