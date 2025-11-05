@@ -94,7 +94,7 @@ const guests = [
     { id: "92", name: "Gerlyn Serrano y fam.", passes: 4 },
   ];
   
-document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function() {
     function getQueryParams() {
         const params = {};
         const queryString = window.location.search.substring(1);
@@ -108,17 +108,43 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const queryParams = getQueryParams();
     const guestId = queryParams.id;
-
-    // Buscar el invitado en el array
     const guest = guests.find(g => g.id === guestId);
 
     if (guest) {
-        document.getElementById('guest-name').textContent = `¡${guest.name}, ${
-            guest.passes > 1 || guest.passes === "Tenemos un lugar especial para ti" ? 'están invitados' : 'estás invitado'
-        }!`;
-    
-        document.getElementById('passes').textContent = 
-            typeof guest.passes === "string" ? guest.passes : `${guest.passes} ${guest.passes === 1 ? 'pase' : 'pases'}`;
+        let message = "";
+
+        // --- Determinar texto según pases y género ---
+        if (guest.passes === "Tenemos un lugar especial para ti") {
+            message = "¡Tenemos un lugar especial para ti!";
+        } else if (guest.passes === 1) {
+            if (guest.gender === "F") {
+                message = "¡" + guest.name + ", estás invitada!";
+            } else {
+                message = "¡" + guest.name + ", estás invitado!";
+            }
+        } else if (guest.passes > 1) {
+            if (guest.gender === "F") {
+                message = "¡" + guest.name + ", están invitadas!";
+            } else {
+                message = "¡" + guest.name + ", están invitados!";
+            }
+        } else {
+            message = "¡" + guest.name + ", estás invitado(a)!";
+        }
+
+        // Mostrar el mensaje principal
+        document.getElementById('guest-name').textContent = message;
+
+        // --- Mostrar u ocultar sección de pases ---
+        if (guest.passes === "Tenemos un lugar especial para ti") {
+            document.querySelector('.invitation-info-section').style.display = 'none';
+        } else {
+            document.querySelector('.invitation-info-section').style.display = 'block';
+            document.getElementById('passes').textContent = `${guest.passes} ${guest.passes === 1 ? 'pase' : 'pases'}`;
+        }
+
+    } else {
+        document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
+        document.querySelector('.invitation-info-section').style.display = 'none';
     }
-    
 });
