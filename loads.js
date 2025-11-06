@@ -147,4 +147,15 @@ const guests = [
         document.getElementById('guest-name').textContent = `¡Invitado no encontrado!`;
         document.querySelector('.invitation-info-section').style.display = 'none';
     }
+    // --- Generar enlace dinámico al formulario de confirmación ---
+const formBaseUrl = "https://docs.google.com/forms/d/e/1FAIpQLSepR3seaqPxe2Zwh0goR3x3cwx9tJo-OH5I3zg9ZGRULIvMMw/viewform?usp=pp_url";
+const encodedName = encodeURIComponent(guest.name);
+const formUrl = `${formBaseUrl}&entry.42292443=${encodedName}`;
+
+// Asignar URL dinámico al botón
+const confirmButton = document.getElementById('confirm-button');
+confirmButton.onclick = function() {
+    location.href = formUrl;
+};
+
 });
