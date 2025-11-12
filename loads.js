@@ -92,6 +92,11 @@ const guests = [
     { id: "90", name: "Catalina Camposeco", passes: 2 },
     { id: "91", name: "Josue Cano Salazar", passes: 2 },
     { id: "92", name: "Gerlyn Serrano y fam.", passes: 4 },
+    { id: "93", name: "Ever Arreaga", passes: 1 },
+    { id: "94", name: "Lucy Lemas", passes: 4 },
+    { id: "95", name: "Pedro Molina", passes: 1 },
+    { id: "96", name: "Walfre Pérez y Fam.", passes: 5 }
+
   ];
   
   document.addEventListener("DOMContentLoaded", function() {
