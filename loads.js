@@ -95,7 +95,10 @@ const guests = [
     { id: "93", name: "Ever Arreaga", passes: 1 },
     { id: "94", name: "Lucy Lemas", passes: 4 },
     { id: "95", name: "Pedro Molina", passes: 1 },
-    { id: "96", name: "Walfre Pérez y Fam.", passes: 5 }
+    { id: "96", name: "Walfre Pérez y Fam.", passes: 5 },
+    { id: "97", name: "José Muñoz", passes: 1 },
+    { id: "98", name: "Edvin López y fam.", passes: "Tenemos un lugar especial para ti"},
+    { id: "99", name: "Augusto Emmanuel López.", passes: 99 }
 
   ];
   
